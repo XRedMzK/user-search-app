@@ -33,7 +33,6 @@ loadAllBtn.addEventListener('click', async () => {
     await fetchAllUsers();
 });
 
-// При заходе на страницу сразу показываем последние 500
 fetchAllUsers();
 
 async function fetchUsersWithFilters() {
@@ -141,7 +140,6 @@ function renderUsersTable(users) {
   `;
 }
 
-// Простая защита от XSS (данные всё равно из твоей БД)
 function escapeHtml(str) {
     if (str === null || str === undefined) return '';
     return String(str)
